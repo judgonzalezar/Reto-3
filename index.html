@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="/CSS/styles.css">
+  <script src="/js/main.js"></script>
+
+</head>
+
+<body>
+  <img src="../images/logo.svg" alt="">
+  <div class="main_container">
+
+    <div class="item-1 item">
+      <div class="bill">
+        <div class="container-label"><label for="bill">Bill</label>
+          <label for="bill" class="error">Can't be zero</label></div>
+          <div class="container-input">
+          <input type="number" id="bill" placeholder="0" min="0">
+        </div>
+        
+      </div>
+      <div class="select-tip">
+        <label class="tip">Select tip %</label>
+        <div class="container-button">
+          <button value="5">5 %</button>
+          <button value="10">10 %</button>
+          <button value="15">15 %</button>
+          <button value="25">25 %</button>
+          <button value="50">50 %</button>
+          <div class="container-custom"><input class="custom-input" value="0" type="number"  min="0" maxlength="2"/><label for="">Custom</label>
+            </div>
+         </div>
+      </div>
+      <div class="bill">
+        <div class="container-label-people"><label class="number-people">Number of people</label>
+          <label for="bill" class="error">Can't be zero</label></div>
+        
+        <div class="container-input people">
+          <input type="number" id="number_people"  placeholder="0" min="0"></div>
+      </div>
+    </div>
+    <div class="item-2 item">
+      <div class="amount">
+        <div class="container">
+          <label>Tip Amount</label>
+          <span>/ person</span>
+        </div>
+        <div class="amount-result">
+          <label class="label-result" id="amount-result">$0,00</label>
+        </div>
+      </div>
+      <div class="amount">
+        <div class="container">
+          <label>Total</label>
+          <span>/ person</span>
+        </div>
+        <div class="amount-result">
+          <label class="label-total" id="total">$0,00</label>
+        </div>
+      </div>
+      <input class="reset" value="RESET">
+    </div>
+  </div>
+</body>
+
+</html>
