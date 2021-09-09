@@ -13,11 +13,11 @@ body{
     width: 100%;
     height: 100vh;
     display:flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    font-family: 'Space Mono', monospace;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
+    
 }
 
 html,
@@ -49,7 +49,8 @@ body {
     padding: 10px;
     margin: 50px;
     border-radius: 15px;
-    width: 920px;
+    max-width: 920px;
+    width: 100%;
     display: flex;  
     
     /*align-items: center;*/
@@ -250,4 +251,44 @@ span{
 
 .show-error + .container-input input{
     border: 2px solid salmon;;
+}
+
+@media(max-width:1020px){
+
+    body{
+        height: initial;
+        padding: 80px 0;
+    }
+
+
+
+    .main_container{
+        flex-direction: column;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .item-1{
+        width: 95%;
+       
+    }
+    .item-2{
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 15px;  
+        padding: 43px; 
+        width: 95%;
+    }
+
+    button, .container-custom{   
+        width: 145px;
+        height: 50px;
+        margin: 5px;
+        font-size: 20px;
+        font-family: 'Space Mono', monospace;
+        border-radius: 10px;
+        border: none;
+        background-color: hsl(183, 100%, 15%);
+        color: hsl(0, 0%, 100%);
+        cursor: pointer;
+    }
 }

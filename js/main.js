@@ -20,22 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
   reset.disabled = true;
 
   for (let button of select_tip) {
+    console.log(button);
     button.addEventListener("click", (event) => {
+      console.log(event);
       let value_select_tip = event.target.value;
       let value_bill = document.querySelector("#bill").value;
       let value_number_people = document.querySelector("#number_people").value;
 
       console.log(event.target) ; 
 
-      if (event.target.classList.contains("active")) {
-        event.target.classList.remove('active') ; 
-      }
-      else{
-        removeActive();
-        event.target.classList.add("active");
-        
-      }
-
+      
+      console.log(event.target) ;
       
       if (value_bill == 0 || value_number_people == 0) {
         container_label.classList.add("show-error");
